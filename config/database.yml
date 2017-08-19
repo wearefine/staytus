@@ -1,0 +1,28 @@
+# Database configuration for Staytus.
+#
+# By default, Staytus works with a MySQL database. While
+# it may work with other engines, they are untested and
+# currently unsupported. You can make changes to this file
+# to specify the database to connect to.
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= ENV["MYSQL_USERNAME"] =>
+  password: <%= ENV["MYSQL_PASSWORD"] =>
+  database: <%= ENV["MYSQL_DATABASE"] =>
+  host: <%= ENV["MYSQL_HOSTNAME"] =>
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+  username: <%= ENV["DEV_MYSQL_USERNAME"] =>
+  password: <%= ENV["DEV_MYSQL_PASSWORD"] =>
+  database: <%= ENV["DEV_MYSQL_DATABASE"] =>
+  host: <%= ENV["DEV_MYSQL_HOSTNAME"] =>
+
+test:
+  <<: *default
