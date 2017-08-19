@@ -1,7 +1,7 @@
 # configurable settings
 
 set :application, 'staytus'
-set :repo_url, 'git@bitbucket.org:wearefine/staytus.git'
+set :repo_url, 'git@github.com:wearefine/staytus.git'
 set :ruby_version, 'ruby-2.3.3'
 set :deploy_user, 'staytus'
 
