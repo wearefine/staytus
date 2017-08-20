@@ -12,16 +12,16 @@ base: &base
 
 development:
   <<: *base
-  host: 'localhost'
-  database: 'staytus_dev'
-  username: 'root'
+  host: localhost
+  database: staytus_dev
+  username: root
   password:
 
 test:
   <<: *base
-  host: <%= ENV['MYSQL_HOST'] || localhost %>
-  database: <%= ENV['MYSQL_DATABASE'] || staytus_dev %>
-  username: <%= ENV['MYSQL_USERNAME'] || root %>
+  host: <%= ENV['MYSQL_HOST'] || 'localhost' %>
+  database: <%= ENV['MYSQL_DATABASE'] || 'staytus_dev' %>
+  username: <%= ENV['MYSQL_USERNAME'] || 'root' %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
 
 remote_development:
