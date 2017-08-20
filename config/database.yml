@@ -28,20 +28,20 @@ remote_development:
   <<: *base
   host: <%= ENV['DEV_MYSQL_HOST'] %>
   database: <%= ENV['DEV_MYSQL_DATABASE'] %>
-  username: <%= ENV['DEV_MYSQL_USERNAME'] %>
+  username: <%= ENV['DEV_MYSQL_USER'] %>
   password: <%= ENV['DEV_MYSQL_PASSWORD'] %>
 
-staging:
+stage:
   <<: *base
   host: <%= ENV['STAGE_MYSQL_HOST'] %>
   database: <%= ENV['STAGE_MYSQL_DATABASE'] %>
-  username: <%= ENV['STAGE_MYSQL_USERNAME'] %>
+  username: <%= ENV['STAGE_MYSQL_USER'] %>
   password: <%= ENV['STAGE_MYSQL_PASSWORD'] %>
 
 production:
   <<: *base
   host: <%= ENV['MYSQL_HOST'] %>
   database: <%= ENV['MYSQL_DATABASE'] %>
-  username: <%= ENV['MYSQL_USERNAME'] %>
+  username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
 
