@@ -21,7 +21,7 @@ require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/passenger'
 # require 'capistrano/rails/migrations'
-require 'new_relic/recipes'
+# require 'new_relic/recipes'
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 

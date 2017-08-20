@@ -17,6 +17,13 @@ default: &default
 production:
   <<: *default
 
+remote_development:
+  <<: *default
+  username: <%= ENV["DEV_MYSQL_USERNAME"] =>
+  password: <%= ENV["DEV_MYSQL_PASSWORD"] =>
+  database: <%= ENV["DEV_MYSQL_DATABASE"] =>
+  host: <%= ENV["DEV_MYSQL_HOSTNAME"] =>
+
 development:
   <<: *default
   username: <%= ENV["DEV_MYSQL_USERNAME"] =>
