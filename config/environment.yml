@@ -5,7 +5,7 @@
 # they will be loaded when the application starts.
 
 # The theme to use
-STAYTUS_THEME: <%= ENV["THEME"] =>
+STAYTUS_THEME: <%= ENV['THEME'] =>
 
 # If enabled, the application will allow any username/password
 # combination to login to the admin area.
@@ -13,7 +13,7 @@ STAYTUS_DEMO: '0'
 
 # Configure an SMTP server for sending messages. If you don't
 # configure an SMTP service, e-mail will be sent using sendmail.
-STAYTUS_SMTP_HOSTNAME: <%= ENV["SMTP_HOSTNAME"] =>
-STAYTUS_SMTP_PORT: <%= ENV["SMTP_PORT"] =>
-STAYTUS_SMTP_USERNAME: <%= ENV["SMTP_USERNAME"] =>
-STAYTUS_SMTP_PASSWORD: <%= ENV["SMTP_PASSWORD"] =>
+STAYTUS_SMTP_HOSTNAME: <%= ENV['SMTP_HOSTNAME'] =>
+STAYTUS_SMTP_PORT: <%= ENV['SMTP_PORT'] =>
+STAYTUS_SMTP_USERNAME: <%= ENV['SMTP_USERNAME'] =>
+STAYTUS_SMTP_PASSWORD: <%= ENV['SMTP_PASSWORD'] =>

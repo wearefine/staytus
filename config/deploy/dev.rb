@@ -18,7 +18,7 @@ server fetch(:server_name),
   }
 
 set :stage, :dev
-set :rails_env, 'development'
+set :rails_env, 'remote_development'
 set :branch, 'stable'
 
 set :rvm_ruby_version, "#{fetch(:ruby_version)}@#{fetch(:gemset)}"

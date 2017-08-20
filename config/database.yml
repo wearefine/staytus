@@ -5,20 +5,43 @@
 # currently unsupported. You can make changes to this file
 # to specify the database to connect to.
 
-default: &default
+base: &base
   adapter: mysql2
   encoding: utf8
   pool: 5
 
-production:
-  <<: *default
-
 development:
-  <<: *default
-  username: <%= ENV['DEV_MYSQL_USERNAME'] =>
-  password: <%= ENV['DEV_MYSQL_PASSWORD'] =>
-  database: <%= ENV['DEV_MYSQL_DATABASE'] =>
-  host: <%= ENV['DEV_MYSQL_HOST'] =>
+  <<: *base
+  host: 'localhost'
+  database: 'staytus_dev'
+  username: 'root'
+  password:
 
 test:
-  <<: *default
+  <<: *base
+  host: <%= ENV['MYSQL_HOST'] || localhost =>
+  database: <%= ENV['MYSQL_DATABASE'] || staytus_dev =>
+  username: <%= ENV['MYSQL_USERNAME'] || root =>
+  password: <%= ENV['MYSQL_PASSWORD'] =>
+
+remote_development:
+  <<: *base
+  host: <%= ENV['DEV_MYSQL_HOST'] =>
+  database: <%= ENV['DEV_MYSQL_DATABASE'] =>
+  username: <%= ENV['DEV_MYSQL_USERNAME'] =>
+  password: <%= ENV['DEV_MYSQL_PASSWORD'] =>
+
+staging:
+  <<: *base
+  host: <%= ENV['STAGE_MYSQL_HOST'] =>
+  database: <%= ENV['STAGE_MYSQL_DATABASE'] =>
+  username: <%= ENV['STAGE_MYSQL_USERNAME'] =>
+  password: <%= ENV['STAGE_MYSQL_PASSWORD'] =>
+
+production:
+  <<: *base
+  host: <%= ENV['MYSQL_HOST'] =>
+  database: <%= ENV['MYSQL_DATABASE'] =>
+  username: <%= ENV['MYSQL_USERNAME'] =>
+  password: <%= ENV['MYSQL_PASSWORD'] =>
+
