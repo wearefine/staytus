@@ -9,27 +9,27 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <%= ENV["MYSQL_USERNAME"] =>
-  password: <%= ENV["MYSQL_PASSWORD"] =>
-  database: <%= ENV["MYSQL_DATABASE"] =>
-  host: <%= ENV["MYSQL_HOSTNAME"] =>
+  username: <%= ENV['MYSQL_USERNAME'] =>
+  password: <%= ENV['MYSQL_PASSWORD'] =>
+  database: <%= ENV['MYSQL_DATABASE'] =>
+  host: <%= ENV['MYSQL_HOSTNAME'] =>
 
 production:
   <<: *default
 
 remote_development:
   <<: *default
-  username: <%= ENV["DEV_MYSQL_USERNAME"] =>
-  password: <%= ENV["DEV_MYSQL_PASSWORD"] =>
-  database: <%= ENV["DEV_MYSQL_DATABASE"] =>
-  host: <%= ENV["DEV_MYSQL_HOSTNAME"] =>
+  username: <%= ENV['DEV_MYSQL_USERNAME'] =>
+  password: <%= ENV['DEV_MYSQL_PASSWORD'] =>
+  database: <%= ENV['DEV_MYSQL_DATABASE'] =>
+  host: <%= ENV['DEV_MYSQL_HOST'] =>
 
 development:
   <<: *default
-  username: <%= ENV["DEV_MYSQL_USERNAME"] =>
-  password: <%= ENV["DEV_MYSQL_PASSWORD"] =>
-  database: <%= ENV["DEV_MYSQL_DATABASE"] =>
-  host: <%= ENV["DEV_MYSQL_HOSTNAME"] =>
+  username: <%= ENV['DEV_MYSQL_USERNAME'] =>
+  password: <%= ENV['DEV_MYSQL_PASSWORD'] =>
+  database: <%= ENV['DEV_MYSQL_DATABASE'] =>
+  host: <%= ENV['DEV_MYSQL_HOSTNAME'] =>
 
 test:
   <<: *default
